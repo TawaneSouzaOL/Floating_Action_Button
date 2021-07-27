@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#7D6CFC, #C635EA);
+}
+
+.action { /*OK*/
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.action span {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #A13DEA;
+    font-size: 2em;
+    transition: 0.3s ease-in-out;
+}
+
+.action.active span { /*OK*/
+    transform: rotate(135deg);
+}
+
+.action ul { /*OK*/
+    position: absolute;
+    bottom: 55px;
+    background: white;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.action.active ul { /*OK*/
+    bottom: 65px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+}
+
+/*É A PARTIR DAQUI QUE O PROBLEMA COMEÇA*/
+.action ul li {
+    font-weight: 500;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    transition: 0.2s ease-in-out;
+}
+
+.action ul li:hover {
+    font-weight: 600;
+    color: #A13DEA;
+}
+
+.action ul li + li { /*OK*/
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.action ul li i {
+    margin-right: 10px;
+    opacity: 0.2;
+    transform: scale(0.8);
+    font-weight: 600;
+    font-size: 25px;
+    width: 25px;
+}
+
+.action ul li:hover i {
+    opacity: 0.8;
+    color: rgba(0, 0, 0, 0.8);
+}
