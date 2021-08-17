@@ -11,7 +11,7 @@ body {
     background: linear-gradient(#7D6CFC, #C635EA);
 }
 
-.action { /*OK*/
+.action {
     position: fixed;
     bottom: 50px;
     left: 50px;
@@ -35,11 +35,11 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-.action.active span { /*OK*/
+.action.active span {
     transform: rotate(135deg);
 }
 
-.action ul { /*OK*/
+.action ul {
     position: absolute;
     bottom: 55px;
     background: white;
@@ -51,14 +51,13 @@ body {
     transition: 0.3s;
 }
 
-.action.active ul { /*OK*/
+.action.active ul {
     bottom: 65px;
     opacity: 1;
     visibility: visible;
     transition: 0.3s;
 }
 
-/*É A PARTIR DAQUI QUE O PROBLEMA COMEÇA*/
 .action ul li {
     font-weight: 500;
     list-style: none;
@@ -74,7 +73,7 @@ body {
     color: #A13DEA;
 }
 
-.action ul li + li { /*OK*/
+.action ul li + li {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
